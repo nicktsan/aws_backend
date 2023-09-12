@@ -9,9 +9,18 @@ resource "aws_s3_bucket" "s3_backend" {
 }
 //applies an s3 bucket acl resource to s3_backend
 resource "aws_s3_bucket_acl" "s3_acl" {
-  bucket = aws_s3_bucket.s3_backend.id
-  acl    = "private"
+  bucket     = aws_s3_bucket.s3_backend.id
+  acl        = "private"
+  depends_on = [aws_s3_bucket_ownership_controls.s3_bucket_acl_ownership]
 }
+# Resource to avoid error "AccessControlListNotSupported: The bucket does not allow ACLs"
+resource "aws_s3_bucket_ownership_controls" "s3_bucket_acl_ownership" {
+  bucket = aws_s3_bucket.s3_backend.id
+  rule {
+    object_ownership = "ObjectWriter"
+  }
+}
+
 //applies versioning to s3_backend
 resource "aws_s3_bucket_versioning" "s3_versioning" {
   bucket = aws_s3_bucket.s3_backend.id
