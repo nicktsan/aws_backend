@@ -17,6 +17,9 @@ Then click "Save Settings"
 Use 
 terraform plan -var-file input.tfvars
 when planning
+Use
+terraform plan -var-file input.tfvars -out out.tfplan
+when you want to save the output of the plan to a file
 
 https://www.youtube.com/watch?v=przZU7VBBGU&t=1s
-10:57
+11:30
