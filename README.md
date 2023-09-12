@@ -25,5 +25,3 @@ when you want to save the output of the plan to a file.
 Once the file has been created, run the command below to build the statefile in Terraform Cloud
 terraform apply out.tfplan
 
-https://www.youtube.com/watch?v=przZU7VBBGU&t=1s
-11:30
