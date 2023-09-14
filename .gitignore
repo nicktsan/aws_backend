@@ -2,7 +2,7 @@
 **/.terraform/*
 
 # output of plan
-**/.out.tfplan
+**/out.tfplan
 
 # .tfstate files
 *.tfstate

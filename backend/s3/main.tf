@@ -43,10 +43,10 @@ resource "aws_dynamodb_table" "db_backend" {
   name           = var.dynamodb_name
   read_capacity  = 1
   write_capacity = 1
-  hash_key       = "LockId"
+  hash_key       = "LockID"
 
   attribute {
-    name = "LockId"
+    name = "LockID"
     type = "S"
   }
 
