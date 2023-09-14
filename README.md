@@ -1,4 +1,4 @@
-This project provisions an S3 bucket as well as a Dynamo DB table in AWS via terraform.
+This project provisions an S3 bucket as well as a Dynamo DB table in AWS via terraform, as well as a dev workspace within that S3 bucket.
 
 Prerequisites: 
 - Terraform CLI (https://developer.hashicorp.com/terraform/downloads)
