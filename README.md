@@ -24,8 +24,10 @@ Then run: terraform init
 This will create the .terraform folder in the directory where your .tf files are
 
 Then run: 
-terraform plan -var-file input.tfvars -out out.tfplan
+terraform plan -out outtfplan
 This will save the output of the plan to a file and create the workspace in your Terraform organization.
+Alternatively, if you want to use an input file, run:
+terraform plan -var-file input.tfvars -out out.tfplan
 
 In Terraform Cloud settings, navigate to the newly created workspace's settings, and change Execution Mode to "Local" if you are running terraform locally. 
 This can be found in https://app.terraform.io/app/<username>/workspaces/<workspace name>/settings/general
