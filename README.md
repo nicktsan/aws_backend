@@ -1,3 +1,10 @@
+Prerequisites:
+- backend in https://github.com/nicktsan/aws_backend/tree/main deployed
+- The Terraform CLI (1.2.0+) installed.
+- The AWS CLI installed.
+- AWS account and associated credentials that allow you to create resources.
+Read the Terraform/AWS setup tutorials at https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli and https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build for detailed instructions.
+
 This project provisions an S3 bucket as well as a Dynamo DB table in AWS via terraform, as well as a dev workspace within that S3 bucket.
 
 Prerequisites: 
