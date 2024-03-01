@@ -1,10 +1,11 @@
 //s3 bucket
 resource "aws_s3_bucket" "s3_backend" {
-  bucket = var.bucket_name
+  bucket        = var.bucket_name
+  force_destroy = true
   //prevents s3 bucket from being destroyed. Set this to false if it needs to be destroyed.
-  lifecycle {
-    prevent_destroy = true
-  }
+  # lifecycle {
+  #   prevent_destroy = true
+  # }
   tags = local.tags
 }
 //applies an s3 bucket acl resource to s3_backend

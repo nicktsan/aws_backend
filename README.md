@@ -24,6 +24,8 @@ Then set the AWS_PROFILE environment variable:
 Windows cmd prompt:
 SETX AWS_PROFILE <your iam profile name>
 
+If you are using a new AWS account, change the workspace name in backend/s3/backend.tf to a new value
+
 Ensure you have already configured Terraform CLI to work with Terraform Cloud. First, create a Terraform Cloud account at https://app.terraform.io/signup/account. Then use the command below to configure it:
 terraform login
 

@@ -5,7 +5,7 @@ terraform {
     organization = "nicktsan"
 
     workspaces {
-      name = "terraform-s3-backend"
+      name = "terraform-s3-backend2"
     }
   }
 }
